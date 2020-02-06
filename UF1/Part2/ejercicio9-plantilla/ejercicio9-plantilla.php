@@ -13,16 +13,33 @@
 
 		<div id="menu">
 			<ul>
-	    		<li><a href="#">Opció 1</a></li>
-	    		<li><a href="#">Opció 2</a></li>
-	    		<li><a href="#">Opció 3</a></li>
-	    		<li><a href="#">Inici</a></li>
+  			    <li><a href="ejercicio9-plantilla.php">Inici</a></li>
+
+	    		<li><a href="ejercicio9-plantilla.php?id=1">Opció 1</a></li>
+	    		<li><a href="ejercicio9-plantilla.php?id=2">Opció 2</a></li>
+	    		<li><a href="ejercicio9-plantilla.php?id=3">Opció 3</a></li>
 
     		</ul>
 		</div>
 
 		<div id="contingut">
-            <p>Contingut de la pàgina web</p>
+			<p>
+			<?
+			
+			isset($_REQUEST["id"])?$contingut=$_REQUEST["id"]:$contingut=0;
+
+			switch($contingut){
+				case 1: include("p1.html");break;
+				case 2: include("p2.html");;break;
+				case 3: include("p3.html");;break;
+				default: echo "pàgina principal";break;
+			}
+
+
+
+
+			?>
+            </p>
 		</div>
 
 		<div id="pie">
