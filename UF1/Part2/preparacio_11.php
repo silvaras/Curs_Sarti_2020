@@ -12,6 +12,8 @@ function listarArchivos( $path ){
             // Si es una carpeta                 
             // Muestro la carpeta                 
                 echo "<p><strong>CARPETA: ". $elemento."</strong></p>";  
+
+
             } else {           // Si es un fichero                   
                 
                 
