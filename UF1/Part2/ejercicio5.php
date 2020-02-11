@@ -11,7 +11,7 @@ if(isset($_REQUEST["submit"])){
         $missatge="<p class='error'>Usuario o contraseña incorrecta.</p>\n";
     }
 }
-if ($mostraF){
+
 ?>
 
 
